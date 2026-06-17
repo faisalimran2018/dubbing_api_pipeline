@@ -1,0 +1,26 @@
+# ── Core API ──────────────────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9       # required for FastAPI file uploads
+
+# ── Audio processing ──────────────────────────────────────────────────────────
+pydub>=0.25.1
+# ffmpeg / ffprobe must be installed at the OS level (not via pip)
+
+# ── WhisperX  (transcription + diarisation) ───────────────────────────────────
+# Install PyTorch FIRST (see README) then:
+whisperx>=3.1.1
+# WhisperX pulls in faster-whisper and pyannote.audio automatically
+
+# ── NLLB-200 translation ──────────────────────────────────────────────────────
+transformers>=4.40.0
+sentencepiece>=0.2.0          # NLLB-200 tokeniser dependency
+protobuf>=3.20.0
+accelerate>=0.29.0
+
+# ── XTTS v2 voice cloning ─────────────────────────────────────────────────────
+TTS>=0.22.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+numpy>=1.24.0
+scipy>=1.12.0
